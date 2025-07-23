@@ -62,9 +62,6 @@
     <label>Mobile: (optional)
       <input type="text" id="mobile" value="123.456.7890">
     </label>
-    <label>Company Website:
-      <input type="text" id="website" value="https://www.blvdresidential.com">
-    </label>
     <label>Corporate Office Address:
       <input type="text" id="address">
     </label>
@@ -84,7 +81,7 @@
   <script>
     const fields = [
       'fullName', 'jobTitle', 'email', 'phone', 'mobile',
-      'website', 'address', 'cityStateZip'
+      'address', 'cityStateZip'
     ];
 
     fields.forEach(id => {
@@ -97,11 +94,9 @@
       const email = document.getElementById('email').value;
       const phone = document.getElementById('phone').value;
       const mobile = document.getElementById('mobile').value;
-      const website = document.getElementById('website').value;
       const address = document.getElementById('address').value;
       const cityStateZip = document.getElementById('cityStateZip').value;
 
-      const displayWebsite = website.replace(/^https?:\/\//, '');
       const logoUrl = "https://medialibrarycf.entrata.com/16505/MLv3/2025/07/23/110429/6881161d4691a363.png";
 
       let signatureHTML = `
@@ -121,7 +116,6 @@
               ${phone ? `<strong>T: </strong> ${phone}<br>` : ''}
               ${mobile ? `<strong>M: </strong> ${mobile}<br>` : ''}
               ${email ? `<strong>E: </strong> <a href="mailto:${email}" style="font-family: Aptos, sans-serif; font-size: 10pt; color: #899BA2; text-decoration: none;">${email}</a><br>` : ''}
-              ${website ? `<a href="${website}" style="font-family: Aptos, sans-serif; font-size: 10pt; color: #899BA2; text-decoration: none;">${displayWebsite}</a><br>` : ''}
               ${address ? `${address}<br>` : ''}
               ${cityStateZip ? `${cityStateZip}<br>` : ''}
             </td>
