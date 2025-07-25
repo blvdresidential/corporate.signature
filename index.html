@@ -65,10 +65,10 @@
     <label>Corporate Office Address:
       <input type="text" id="address">
     </label>
-    <small1 style="color: #C00000; font-style: italic; font-size: 9pt;">Corporate office you work out of, not necessarily the Menlo office. Make sure to include suite numbers and proper address formatting.</small1>
     <label>City, State, Zip:
       <input type="text" id="cityStateZip">
     </label>
+    <small1 style="color: #C00000; font-style: italic; font-size: 9pt;">Corporate office you work out of, not necessarily the Menlo office. Make sure to include suite numbers and proper address formatting.</small1>
   </form>
 
   <div class="signature-preview">
@@ -122,7 +122,7 @@
               ${email ? `<strong>E: </strong> <a href="mailto:${email}" style="font-family: Aptos, sans-serif; font-size: 10pt; color: #899BA2; text-decoration: none;">${email}</a><br>` : ''}
               ${phone ? `<strong>T: </strong> ${phone}<br>` : ''}
               ${mobile ? `<strong>M: </strong> ${mobile}<br>` : ''}
-              <tr><td style="font-size: 8px;">&nbsp;</td></tr>
+              <td style="font-size: 8px;">&nbsp;</td>
               ${address ? `${address}<br>` : ''}
               ${cityStateZip ? `${cityStateZip}<br>` : ''}
             </td>
